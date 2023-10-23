@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+	 }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload Image</h2>
+    <form action="http://localhost:5000/upload_image" method="post" enctype="multipart/form-data">
+        <label for="form_id">Form ID:</label>
+        <input type="text" id="form_id" name="form_id" required><br><br>
+        Select image to upload:
+        <input type="file" name="image" id="image" required>
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+</body>
+</html>
+
